@@ -1,0 +1,25 @@
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log*
+yarn-error.log
+pnpm-debug.log*
+
+# Angular
+/.angular/
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+__screenshots__/
+
+# Tooling
+.eslintcache
+/.nyc_output

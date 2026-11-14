@@ -1,0 +1,17 @@
+<div
+  class="drop"
+  [class.over]="dragging()"
+  (dragover)="onDragOver($event)"
+  (dragleave)="dragging.set(false)"
+  (drop)="onDrop($event)"
+>
+  <p>Drag and drop an image here or</p>
+  <input #input type="file" accept="image/jpeg,image/png" hidden (change)="onPick(input)" />
+  <button mat-stroked-button type="button" (click)="input.click()">
+    <mat-icon>upload</mat-icon> Choose file
+  </button>
+  <small>JPEG or PNG, up to 2MB</small>
+</div>
+@if (error()) {
+  <p class="error" role="alert">{{ error() }}</p>
+}

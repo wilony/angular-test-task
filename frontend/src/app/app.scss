@@ -1,0 +1,6 @@
+main { max-width: 640px; margin: 0 auto; padding: 24px 16px; }
+h1 { font: var(--mat-sys-headline-medium); margin: 0 0 16px; }
+mat-card-content { padding: 16px; }
+section { margin-top: 24px; }
+.actions { display: flex; align-items: center; gap: 16px; margin-top: 16px; }
+.error { color: var(--mat-sys-error); margin-top: 16px; }

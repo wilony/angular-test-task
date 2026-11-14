@@ -1,0 +1,8 @@
+@if (text()) {
+  <pre class="text">{{ text() }}</pre>
+  <button mat-stroked-button type="button" (click)="copy()">
+    <mat-icon>content_copy</mat-icon> Copy
+  </button>
+} @else {
+  <p class="empty">No text detected.</p>
+}

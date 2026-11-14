@@ -1,0 +1,13 @@
+.text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font: inherit;
+  margin: 0 0 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--mat-sys-surface-container);
+}
+
+.empty {
+  color: var(--mat-sys-on-surface-variant);
+}

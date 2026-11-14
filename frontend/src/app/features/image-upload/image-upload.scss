@@ -1,0 +1,29 @@
+.drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 16px;
+  border: 2px dashed var(--mat-sys-outline-variant);
+  border-radius: 16px;
+  text-align: center;
+  transition: background 0.15s;
+}
+
+.drop.over {
+  background: var(--mat-sys-surface-container);
+  border-color: var(--mat-sys-primary);
+}
+
+p {
+  margin: 0;
+}
+
+small {
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.error {
+  color: var(--mat-sys-error);
+  margin-top: 12px;
+}

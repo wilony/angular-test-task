@@ -1,0 +1,32 @@
+<main>
+  <h1>Image to Text</h1>
+
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <app-image-upload (fileSelected)="onFileSelected($event)" />
+
+      @if (file(); as f) {
+        <section>
+          <app-image-preview [file]="f" />
+          <div class="actions">
+            <button mat-flat-button type="button" [disabled]="status() === 'loading'" (click)="recognize()">
+              Extract text
+            </button>
+            @if (status() === 'loading') {
+              <mat-spinner diameter="24" />
+            }
+          </div>
+        </section>
+      }
+
+      @switch (status()) {
+        @case ('success') {
+          <section><app-text-result [text]="text()" /></section>
+        }
+        @case ('error') {
+          <p class="error" role="alert">{{ error() }}</p>
+        }
+      }
+    </mat-card-content>
+  </mat-card>
+</main>
